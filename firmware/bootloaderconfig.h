@@ -60,7 +60,7 @@ these macros are defined, the boot loader usees them.
   #if (defined(__AVR_ATmega640__) || defined (__AVR_ATmega128__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1281__) || defined(__AVR_ATmega2560__) || defined(__AVR_ATmega2561__))
     #define USB_CFG_INTPORT_BIT 0
   #else
-    #define USB_CFG_INTPORT_BIT 2
+    #define USB_CFG_INTPORT_BIT 3
   #endif
 #endif
 /* Not all devices have their INT0 on PD2.
@@ -72,7 +72,7 @@ these macros are defined, the boot loader usees them.
 #ifndef USB_CFG_DMINUS_BIT
   /* This is Revision 3 and later (where PD6 and PD7 were swapped */
   // #define USB_CFG_DMINUS_BIT      7    /* Rev.2 and previous was 6 */
-  #define USB_CFG_DMINUS_BIT  3
+  #define USB_CFG_DMINUS_BIT  2
 #endif
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
